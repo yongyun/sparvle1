@@ -73,3 +73,9 @@
             transform-origin: right bottom;
   }
 }
+
+#copyrights {
+	width: 100vw;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+}
