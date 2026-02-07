@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>應用領域| Sparvle</title>
+
+		<style>
+		@media (min-width: 768px) {
+			.feature-box-border-horizontal .feature-box { position: relative; }
+
+			.feature-box-border-horizontal .feature-box:not(.noborder) .fbox-icon::before,
+			.feature-box-border-horizontal.border-hover-animate .feature-box:not(.noborder) .fbox-icon::after {
+				content: "";
+				position: absolute;
+				top: 31px;
+			    left: calc(50% + 32px);
+			    width: calc(100% - 64px);
+				height: 2px;
+				border: 1px solid #EEE;
+				z-index: 0;
+			}
+
+			.feature-box-border-horizontal.border-dashed .feature-box:not(.noborder) .fbox-icon::before,
+			.feature-box-border-horizontal.border-dashed.border-hover-animate .feature-box:not(.noborder) .fbox-icon::after {
+				border-style: dashed;
+			}
+
+			.feature-box-border-horizontal.border-hover-animate .feature-box:not(.noborder) .fbox-icon::after {
+				display: block;
+				border-color: #222;
+				width: 0;
+				transform-origin: top left;
+				transition: width .3s ease-in-out;
+			}
+
+			/* .feature-box-border-horizontal .feature-box:not(.noborder):nth-child(1) .fbox-icon::before { background-color: #222; } */
+
+			.feature-box-border-horizontal.border-hover-animate .feature-box:not(.noborder):hover .fbox-icon::after {  width: calc(100% - 64px); }
+
+
+			.feature-box-border-horizontal .fbox-icon i,
+			.feature-box-border-horizontal .fbox-border.fbox-light .fbox-icon i {
+				line-height: 60px;
+				font-size: 24px;
+				z-index: 1;
+				text-align: center;
+				box-shadow: 0 0 0px 10px #FFF;
+			}
+
+			.feature-box-border-horizontal .feature-box.flex-column:not(.noborder) .fbox-icon::before,
+			.feature-box-border-horizontal.border-hover-animate .feature-box.flex-column:not(.noborder) .fbox-icon::after {
+				left: calc(0% + 100px);
+			}
+		}
+	</style>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="full-header transparent-header" data-sticky-class="not-dark">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html">
+								<img class="logo-default" srcset="images/logo.png, images/logo@2x.png 2x" src="images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="images/logo-dark.png, images/logo-dark@2x.png 2x" src="images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc">
+
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon">
+								<a href="#" id="top-search-trigger"><i class="uil uil-search"></i><i class="bi-x-lg"></i></a>
+							</div><!-- #top-search end -->
+
+							<!-- Top Cart
+							============================================= -->
+							<div id="top-cart" class="header-misc-icon d-none d-sm-block">
+								<a href="#" id="top-cart-trigger"><i class="uil uil-user"></i></a>
+								<div class="top-cart-content">
+									<div class="top-cart-title">
+										<h4>會員中心</h4>
+									</div>
+									<div class="top-cart-items">
+										<div class="top-cart-item">
+											
+											<div class="top-cart-item-desc">
+												<div class="top-cart-item-desc-title">
+													<a href="#">帳號管理</a>
+												</div>
+											</div>
+										</div>
+										<div class="top-cart-item">
+										
+											<div class="top-cart-item-desc">
+												<div class="top-cart-item-desc-title">
+													<a href="#">下載紀錄</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="top-cart-action">
+										<span class="top-checkout-price"></span>
+										<a href="#" class="button button-3d button-small m-0">登出</a>
+									</div>
+								</div>
+							</div><!-- #top-cart end -->
+
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a class="menu-link" href="index.html"><div>關於我們</div></a>
+									<ul class="sub-menu-container">
+										<li class="menu-item">
+											<a class="menu-link" href="./company-introduction.html"><div>企業簡介</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="./brand-values-responsibility.html"><div>品牌理念與企業責任</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="./certifications.html"><div>相關認證</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="./core-competency.html"><div>核心競爭力</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="./industrial-applications.html"><div>應用領域</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="./warranty-statement.html"><div>保固聲明</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="./anti-counterfeiting.html"><div>仿冒品辨別</div></a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#.html"><div>同盟招募</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="index.html"><div>最新消息</div></a>
+									<ul class="sub-menu-container">
+										<li class="menu-item">
+											<a class="menu-link" href="#.html"><div>專題報導</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="#.html"><div>活動與新聞</div></a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#.html"><div>智能數位產品介紹</div></a>
+									<ul class="sub-menu-container">
+										<li class="menu-item">
+											<a class="menu-link" href="#.html"><div>數位追溯護照</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="#.html"><div>智能閥門監控系統</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="#.html"><div>工廠資產管理系統</div></a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#.html"><div>球閥產品介紹</div></a>
+									<ul class="sub-menu-container">
+										<li class="menu-item">
+											<a class="menu-link" href="#.html"><div>球閥類精品</div></a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#.html"><div>下載專區</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#.html"><div>ESG專區</div></a>
+									<ul class="sub-menu-container">
+										<li class="menu-item">
+											<a class="menu-link" href="#.html"><div>永續企業</div></a>
+										</li>
+										<li class="menu-item">
+											<a class="menu-link" href="#.html"><div>B型企業</div></a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#.html"><div>聯絡我們</div></a>
+								</li>
+								
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Page Title
+		============================================= -->
+		<section class="page-title bg-transparent">
+			<div class="container">
+				<div class="page-title-row">
+
+					<div class="page-title-content">
+						<h1>應用領域</h1>
+						<span>Industrial Applications</span>
+					</div>
+
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">首頁</a></li>
+							<li class="breadcrumb-item"><a href="#">關於我們</a></li>
+							<li class="breadcrumb-item active" aria-current="page">應用領域</li>
+						</ol>
+					</nav>
+
+				</div>
+			</div>
+		</section><!-- .page-title end -->
+
+		<!-- Page Sub Menu
+		============================================= -->
+		<div id="page-menu" data-mobile-sticky="true">
+			<div id="page-menu-wrap">
+				<div class="container">
+					<div class="page-menu-row">
+
+						<div class="page-menu-title">Explore <span>Sparvle</span></div>
+
+						<nav class="page-menu-nav">
+							<ul class="page-menu-container">
+								<li class="page-menu-item"><a href="./company-introduction.html"><div>企業簡介</div></a></li>
+								<li class="page-menu-item"><a href="./brand-values-responsibility.html"><div>品牌理念與企業責任</div></a></li>
+								<li class="page-menu-item"><a href="./certifications.html"><div>相關認證</div></a></li>
+								<li class="page-menu-item"><a href="./core-competency.html"><div>核心競爭力</div></a></li>
+								<li class="page-menu-item current"><a href="./industrial-applications.html"><div>應用領域</div></a></li>
+								<li class="page-menu-item"><a href="./warranty-statement.html"><div>保固聲明</div></a></li>
+								<li class="page-menu-item"><a href="./anti-counterfeiting.html"><div>仿冒品辨別</div></a></li>
+							</ul>
+						</nav>
+
+						<div id="page-menu-trigger"><i class="bi-list"></i></div>
+
+					</div>
+				</div>
+			</div>
+		</div><!-- #page-menu end -->
+
+								<!-- Content
+			============================================= -->
+			<section id="content">
+				<div class="content-wrap min-vh-100 d-flex align-items-center">
+					<div class="container">
+
+						<div class="row block-card-9 col-mb-50">
+
+							<div class="col-lg-4 min-vh-75">
+								<div class="grid-inner rounded-3 h-100">
+						<div class="grid-image lazy" data-bg="images/sparvle/Electricity.png"></div>
+									<div class="bg-overlay">
+									<div class="bg-overlay-content flex-column justify-content-between align-items-start p-5 dark">
+										<div class="grid-icon">
+											<img src="images/sparvle/4電力.png" alt="Electricity" width="60">
+										</div>
+										<div class="grid-content">
+											<h5 class="text-uppercase fw-medium font-body ls-1 text-smaller op-07 mb-2">電力</h5>
+											<h3 class="fw-medium h2">Electricity</h3>
+											<a href="#" class="icon-stacked rounded-circle bg-white text-danger text-center mb-0 btn-hover h5"><i class="bi-arrow-right"></i></a>
+										</div>
+									</div>
+								<div class="bg-overlay-bg" style="background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, #8c8f93 100%);"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 min-vh-75">
+								<div class="grid-inner rounded-3 h-100">
+						<div class="grid-image lazy" data-bg="images/sparvle/OilandNaturalGas.png"></div>
+									<div class="bg-overlay">
+									<div class="bg-overlay-content flex-column justify-content-between align-items-start p-5 dark">
+										<div class="grid-icon">
+											<img src="images/sparvle/9石油與天然氣.png" alt="Oil and Natural Gas" width="60">
+										</div>
+										<div class="grid-content">
+											<h5 class="text-uppercase fw-medium font-body ls-1 text-smaller op-07 mb-2">石油與天然氣</h5>
+											<h3 class="fw-medium h2">Oil and Natural Gas</h3>
+											<a href="#" class="icon-stacked rounded-circle bg-white text-center mb-0 btn-hover h5" style="color: brown"><i class="bi-arrow-right"></i></a>
+										</div>
+									</div>
+										<div class="bg-overlay-bg" style="background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, #604235 100%);"></div>
+									</div>
+								</div>
+							</div>
+						<div class="col-lg-4 min-vh-75">
+							<div class="grid-inner rounded-3 h-100">
+								<div class="grid-image lazy" data-bg="images/sparvle/Hydrogen.png"></div>
+								<div class="bg-overlay">
+									<div class="bg-overlay-content flex-column justify-content-between align-items-start p-5 dark">
+										<div class="grid-icon">
+											<img src="images/sparvle/5氫氣.png" alt="Hydrogen" width="60">
+										</div>
+										<div class="grid-content">
+											<h5 class="text-uppercase fw-medium font-body ls-1 text-smaller op-07 mb-2">氫氣</h5>
+											<h3 class="fw-medium h2">Hydrogen</h3>
+											<a href="#" class="icon-stacked rounded-circle bg-white text-success text-center mb-0 btn-hover h5"><i class="bi-arrow-right"></i></a>
+										</div>
+									</div>
+									<div class="bg-overlay-bg" style="background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, #497b37 100%);"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 min-vh-75">
+							<div class="grid-inner rounded-3 h-100">
+								<div class="grid-image lazy" data-bg="images/sparvle/Chemistry.png"></div>
+								<div class="bg-overlay">
+									<div class="bg-overlay-content flex-column justify-content-between align-items-start p-5 dark">
+										<div class="grid-icon">
+											<img src="images/sparvle/7化學.png" alt="Chemistry" width="60">
+										</div>
+										<div class="grid-content">
+											<h5 class="text-uppercase fw-medium font-body ls-1 text-smaller op-07 mb-2">化學</h5>
+											<h3 class="fw-medium h2">Chemistry</h3>
+											<a href="#" class="icon-stacked rounded-circle bg-white text-center mb-0 btn-hover h5" style="color: #7aa8d6"><i class="bi-arrow-right"></i></a>
+										</div>
+									</div>
+									<div class="bg-overlay-bg" style="background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, #9fc5e8 100%);"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 min-vh-75">
+							<div class="grid-inner rounded-3 h-100">
+								<div class="grid-image lazy" data-bg="images/sparvle/WaterTreatment.png"></div>
+								<div class="bg-overlay">
+									<div class="bg-overlay-content flex-column justify-content-between align-items-start p-5 dark">
+										<div class="grid-icon">
+											<img src="images/sparvle/3水處理.png" alt="Water Treatment" width="60">
+										</div>
+										<div class="grid-content">
+											<h5 class="text-uppercase fw-medium font-body ls-1 text-smaller op-07 mb-2">水處理</h5>
+											<h3 class="fw-medium h2">Water Treatment</h3>
+											<a href="#" class="icon-stacked rounded-circle bg-white text-center mb-0 btn-hover h5" style="color: #0b2b4f"><i class="bi-arrow-right"></i></a>
+										</div>
+									</div>
+									<div class="bg-overlay-bg" style="background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, #0b2b4f 100%);"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 min-vh-75">
+							<div class="grid-inner rounded-3 h-100">
+								<div class="grid-image lazy" data-bg="images/sparvle/Pharmaceuticals.png"></div>
+								<div class="bg-overlay">
+									<div class="bg-overlay-content flex-column justify-content-between align-items-start p-5 dark">
+										<div class="grid-icon">
+											<img src="images/sparvle/1製藥.png" alt="Pharmaceuticals" width="60">
+										</div>
+										<div class="grid-content">
+											<h5 class="text-uppercase fw-medium font-body ls-1 text-smaller op-07 mb-2">製藥</h5>
+											<h3 class="fw-medium h2">Pharmaceuticals</h3>
+											<a href="#" class="icon-stacked rounded-circle bg-white text-center mb-0 btn-hover h5" style="color: #c9b38b"><i class="bi-arrow-right"></i></a>
+										</div>
+									</div>
+									<div class="bg-overlay-bg" style="background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, #d7c6a6 100%);"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 min-vh-75">
+							<div class="grid-inner rounded-3 h-100">
+								<div class="grid-image lazy" data-bg="images/sparvle/PulpandPaper.png"></div>
+								<div class="bg-overlay">
+									<div class="bg-overlay-content flex-column justify-content-between align-items-start p-5 dark">
+										<div class="grid-icon">
+											<img src="images/sparvle/8紙和紙漿.png" alt="Pulp and Paper" width="60">
+										</div>
+										<div class="grid-content">
+											<h5 class="text-uppercase fw-medium font-body ls-1 text-smaller op-07 mb-2">紙和紙漿</h5>
+											<h3 class="fw-medium h2">Pulp and Paper</h3>
+											<a href="#" class="icon-stacked rounded-circle bg-white text-center mb-0 btn-hover h5" style="color: #c9b38b"><i class="bi-arrow-right"></i></a>
+										</div>
+									</div>
+									<div class="bg-overlay-bg" style="background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, #d7c6a6 100%);"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 min-vh-75">
+							<div class="grid-inner rounded-3 h-100">
+								<div class="grid-image lazy" data-bg="images/sparvle/Ship_Building.png"></div>
+								<div class="bg-overlay">
+									<div class="bg-overlay-content flex-column justify-content-between align-items-start p-5 dark">
+										<div class="grid-icon">
+											<img src="images/sparvle/6造船.png" alt="Ship Building" width="60">
+										</div>
+										<div class="grid-content">
+											<h5 class="text-uppercase fw-medium font-body ls-1 text-smaller op-07 mb-2">造船</h5>
+											<h3 class="fw-medium h2">Ship Building</h3>
+											<a href="#" class="icon-stacked rounded-circle bg-white text-center mb-0 btn-hover h5" style="color: #b32525"><i class="bi-arrow-right"></i></a>
+										</div>
+									</div>
+									<div class="bg-overlay-bg" style="background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, #1f6fa3 100%);"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 min-vh-75">
+							<div class="grid-inner rounded-3 h-100">
+								<div class="grid-image lazy" data-bg="images/sparvle/Cryogenic_Fluid1.png"></div>
+								<div class="bg-overlay">
+									<div class="bg-overlay-content flex-column justify-content-between align-items-start p-5 dark">
+										<div class="grid-icon">
+											<img src="images/sparvle/2低溫.png" alt="Cryogenic Fluid" width="60">
+										</div>
+										<div class="grid-content">
+											<h5 class="text-uppercase fw-medium font-body ls-1 text-smaller op-07 mb-2">低溫</h5>
+											<h3 class="fw-medium h2">Cryogenic Fluid</h3>
+											<a href="#" class="icon-stacked rounded-circle bg-white text-center mb-0 btn-hover h5" style="color: #8db7e5"><i class="bi-arrow-right"></i></a>
+										</div>
+									</div>
+									<div class="bg-overlay-bg" style="background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, #b7d7f5 100%);"></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section><!-- #content end -->
+<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap">
+
+					<div class="row col-mb-50">
+						<div class="col-lg-8">
+
+							<div class="row col-mb-50">
+								<div class="col-md-4">
+
+									<div class="widget">
+
+										<img src="images/footer-widget-logo.png" alt="Image" class="footer-logo">
+
+										<p>星奧科技30多年來致力於製造優質球閥，供應給30多個國家的製藥、食品和飲料、紙漿和造紙、化學、石油和天然氣等行業。</p>
+
+										<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+											<address>
+												<strong>地址:</strong><br>
+												臺中市大里區仁化里工業十四路34號<br>
+											</address>
+											<abbr title="Telephone"><strong>TEL:</strong></abbr> +886-4-2271-6107<br>
+											<abbr title="Fax"><strong>FAX:</strong></abbr> +886-4-2271-6127<br>
+<abbr title="Email Address"><strong>Email:</strong></abbr> info@sparvle.com
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="col-md-4">
+
+									<div class="widget widget_links">
+
+										<h4>網站地圖</h4>
+
+										<ul>
+											<li><a href="https://codex.wordpress.org/">關於我們</a></li>
+											<li><a href="https://wordpress.org/support/forum/requests-and-feedback">最新消息</a></li>
+											<li><a href="https://wordpress.org/extend/plugins/">智能數位產品介紹</a></li>
+											<li><a href="https://wordpress.org/support/">球閥產品介紹</a></li>
+											<li><a href="https://wordpress.org/extend/themes/">下載專區</a></li>
+											<li><a href="https://wordpress.org/news/">ESG專區</a></li>
+											<li><a href="https://planet.wordpress.org/">聯絡我們</a></li>
+										</ul>
+
+									</div>
+
+								</div>
+
+								<div class="col-md-4">
+
+									<div class="widget">
+										<h4>最新消息</h4>
+
+										<div class="posts-sm row col-mb-30" id="post-list-footer">
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">我們在M-Tech 大阪機械要素展 2025！</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2025</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">Valve World Asia 2025</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2025</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">2025 大阪工業展 10月1日 - 10月3日</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2025</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-4">
+
+							<div class="row col-mb-50">
+								<div class="col-md-4 col-lg-12">
+									<div class="widget">
+
+										<div class="row col-mb-30">
+											<div class="col-lg-6">
+												<div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+												<h5 class="mb-0">產品總下載量</h5>
+											</div>
+
+											<div class="col-lg-6">
+												<div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+												<h5 class="mb-0">合作客戶量</h5>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="col-md-5 col-lg-12">
+									<div class="widget subscribe-widget">
+										<h5><strong>訂閱</strong> 電子報來獲得最新消息</h5>
+										<div class="widget-subscribe-form-result"></div>
+										<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+											<div class="input-group mx-auto">
+												<div class="input-group-text"><i class="bi-envelope-plus"></i></div>
+												<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+												<button class="btn btn-success" type="submit">立即訂閱</button>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="col-md-3 col-lg-12">
+									<div class="widget">
+
+										<div class="row col-mb-30">
+											<div class="col-6 col-md-12 col-lg-6 d-flex align-items-center">
+												<a href="#" class="social-icon text-white border-transparent bg-facebook me-2 mb-0 float-none">
+													<i class="fa-brands fa-facebook-f"></i>
+													<i class="fa-brands fa-facebook-f"></i>
+												</a>
+												<a href="#" class="ms-1"><small class="d-block"><strong>關注我們的</strong><br>臉書專頁</small></a>
+											</div>
+											<div class="col-6 col-md-12 col-lg-6 d-flex align-items-center">
+												<a href="#" class="social-icon text-white border-transparent bg-rss me-2 mb-0 float-none">
+													<i class="fa-solid fa-rss"></i>
+													<i class="fa-solid fa-rss"></i>
+												</a>
+												<a href="#" class="ms-1"><small class="d-block"><strong>訂閱</strong><br>電子報</small></a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+				<div class="container">
+
+					<div class="row col-mb-30">
+
+						<div class="col-md-6 text-center text-md-start">
+							Copyrights &copy; 2025 All Rights Reserved by Sparvle<br>
+							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">隱私權政策</a></div>
+						</div>
+
+						<div class="col-md-6 text-center text-md-end">
+							<div class="d-flex justify-content-center justify-content-md-end mb-2">
+								<a href="#" class="social-icon border-transparent si-small h-bg-facebook">
+									<i class="fa-brands fa-facebook-f"></i>
+									<i class="fa-brands fa-facebook-f"></i>
+								</a>
+
+								<a href="#" class="social-icon border-transparent si-small h-bg-x-twitter">
+									<i class="fa-brands fa-x-twitter"></i>
+									<i class="fa-brands fa-x-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon border-transparent si-small h-bg-google">
+									<i class="fa-brands fa-google"></i>
+									<i class="fa-brands fa-google"></i>
+								</a>
+
+								<a href="#" class="social-icon border-transparent si-small h-bg-pinterest">
+									<i class="fa-brands fa-pinterest-p"></i>
+									<i class="fa-brands fa-pinterest-p"></i>
+								</a>
+
+								<a href="#" class="social-icon border-transparent si-small h-bg-vimeo">
+									<i class="fa-brands fa-vimeo-v"></i>
+									<i class="fa-brands fa-vimeo-v"></i>
+								</a>
+
+								<a href="#" class="social-icon border-transparent si-small h-bg-github">
+									<i class="fa-brands fa-github"></i>
+									<i class="fa-brands fa-github"></i>
+								</a>
+
+								<a href="#" class="social-icon border-transparent si-small h-bg-yahoo">
+									<i class="fa-brands fa-yahoo"></i>
+									<i class="fa-brands fa-yahoo"></i>
+								</a>
+
+								<a href="#" class="social-icon border-transparent si-small me-0 h-bg-linkedin">
+									<i class="fa-brands fa-linkedin"></i>
+									<i class="fa-brands fa-linkedin"></i>
+								</a>
+							</div>
+
+							<i class="bi-envelope"></i> info@sparvle.com <span class="middot">&middot;</span> <i class="fa-solid fa-phone"></i> +886-11-6541-6369 <span class="middot">&middot;</span> <i class="bi-skype"></i> 聯絡方式
+						</div>
+
+					</div>
+
+				</div>
+			</div><!-- #copyrights end -->
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+</body>
+</html>
