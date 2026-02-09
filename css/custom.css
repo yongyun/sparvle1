@@ -79,3 +79,7 @@
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
 }
+.footer-logo {
+	width: 180px;
+	height: auto;
+}

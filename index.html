@@ -166,7 +166,7 @@
 										</li>
 									</ul>
 								</li>
-								<li class="menu-item">
+								<li class="menu-item d-none">
 									<a class="menu-link" href="#.html"><div>同盟招募</div></a>
 								</li>
 								<li class="menu-item">
@@ -205,7 +205,7 @@
 								<li class="menu-item">
 									<a class="menu-link" href="#.html"><div>下載專區</div></a>
 								</li>
-								<li class="menu-item">
+								<li class="menu-item d-none">
 									<a class="menu-link" href="#.html"><div>ESG專區</div></a>
 									<ul class="sub-menu-container">
 										<li class="menu-item">
@@ -275,7 +275,7 @@
 								data-endspeed="1000"
 								data-endeasing="Power4.easeIn" style="z-index: 4;"><img src="images/slider/rev/main/s2-2.png" alt="Image"></div>
 
-								<div class="tp-caption ltl tp-resizeme rs-parallaxlevel-6"
+								<!--<div class="tp-caption ltl tp-resizeme rs-parallaxlevel-6"
 								data-x="200"
 								data-y="107"
 								data-transform_in="x:0;y:-250;z:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;s:700;e:Power4.easeOutCubic;"
@@ -288,8 +288,8 @@
 								data-endelementdelay="0.1"
 								data-endspeed="1000"
 								data-endeasing="Power4.easeIn" style="z-index: 5;"><img src="images/slider/rev/main/s2-3.png" alt="Image"></div>
-
-								<div class="tp-caption ltl tp-resizeme rs-parallaxlevel-5"
+								-->
+								<!-- <div class="tp-caption ltl tp-resizeme rs-parallaxlevel-5"
 								data-x="200"
 								data-y="107"
 								data-transform_in="x:0;y:-250;z:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;s:700;e:Power4.easeOutCubic;"
@@ -302,7 +302,7 @@
 								data-endelementdelay="0.1"
 								data-endspeed="1000"
 								data-endeasing="Power4.easeIn" style="z-index: 6;"><img src="images/slider/rev/main/s2-4.png" alt="Image"></div>
-
+								-->
 								<div class="tp-caption ltl tp-resizeme rs-parallaxlevel-4"
 								data-x="200"
 								data-y="107"
@@ -358,10 +358,11 @@
 								data-endelementdelay="0.1"
 								data-endspeed="1000"
 								data-endeasing="Power4.easeIn" style="z-index: 10;"><img src="images/slider/rev/main/s2-8.png" alt="Image"></div>
-
+								
 								<div class="tp-caption ltl tp-resizeme revo-slider-caps-text"
 								data-x="40"
-								data-y="120"
+								data-y="center"
+								data-voffset="['-120','-100','-85','-75']"
 								data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
 								data-speed="800"
 								data-start="1200"
@@ -375,7 +376,8 @@
 
 								<div class="tp-caption ltl tp-resizeme revo-slider-emphasis-text p-0 border-0 text-uppercase"
 								data-x="37"
-								data-y="140"
+								data-y="center"
+								data-voffset="['-70','-50','-35','-25']"
 								data-transform_in="x:5;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:5;skewY:0;opacity:0;s:800;transformPerspective:200;transformOrigin:50% 0%;"
 								data-speed="800"
 								data-start="1400"
@@ -391,7 +393,8 @@
 
 								<div class="tp-caption ltl tp-resizeme revo-slider-desc-text text-start"
 								data-x="40"
-								data-y="240"
+								data-y="center"
+								data-voffset="['20','30','40','50']"
 								data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;s:800;transformPerspective:200;transformOrigin:50% 0%;"
 								data-speed="800"
 								data-start="1600"
@@ -407,7 +410,8 @@
 
 								<div class="tp-caption ltl tp-resizeme"
 								data-x="40"
-								data-y="350"
+								data-y="center"
+								data-voffset="['80','90','100','105']"
 								data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
 								data-speed="800"
 								data-start="1800"
@@ -442,7 +446,7 @@
 
 					<div class="line"></div>
 
-					<div class="row justify-content-center col-mb-50">
+					<div class="row justify-content-center col-mb-50" style="padding-top: 50px;">
 						<div class="col-sm-6 col-lg-4">
 							<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn">
 								<div class="fbox-icon">
@@ -535,95 +539,101 @@
 				<!-- Portfolio Items
 				============================================= -->
 				<div class="container">
-					<div id="portfolio" class="portfolio row gutter-20 portfolio-reveal">
-
-						<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-media pf-icons">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<a href="portfolio-single.html">
-										<img src="images/portfolio/4/1.jpg" alt="Open Imagination">
-									</a>
-									<div class="bg-overlay">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item">
-											<a href="images/portfolio/full/1.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
-											<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item"></div>
+					<div id="oc-portfolio" class="owl-carousel portfolio-carousel carousel-widget owl-nav-hover-fixed" data-nav="true" data-pagi="false" data-margin="20" data-items-xs="1" data-items-sm="2" data-items-md="3" data-items-lg="4">
+						<div class="portfolio-item">
+							<div class="portfolio-image">
+								<a href="portfolio-single.html">
+									<img src="images/portfolio/4/1.jpg" alt="Open Imagination">
+								</a>
+								<div class="bg-overlay">
+									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-speed="350" data-bs-theme="dark">
+										<a href="images/portfolio/full/1.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
+										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
 									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="portfolio-single.html">防火系列 - R701 </a></h3>
-									<span><a href="#">( 兩片式球閥 )</a>, <a href="#">NPS 1/4 to 2 ( DN 8 to 50 )</a></span>
+									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-speed="350" data-bs-theme="dark"></div>
 								</div>
 							</div>
-						</article>
+							<div class="portfolio-desc">
+								<h3><a href="portfolio-single.html">數位追溯護照™</a></h3>
+								<span><a href="#">獨家開發</a><br><a href="#">讓您能夠快速、精準地獲得您所需的材質證明(MTR)</a></span>
+							</div>
+						</div>
 
-						<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-illustrations">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<a href="portfolio-single.html">
-										<img src="images/portfolio/4/2.jpg" alt="Locked Steel Gate">
-									</a>
-									<div class="bg-overlay">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item">
-											<a href="images/portfolio/full/2.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
-											<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item"></div>
+						<div class="portfolio-item">
+							<div class="portfolio-image">
+								<a href="portfolio-single.html">
+									<img src="images/portfolio/4/2.jpg" alt="Locked Steel Gate">
+								</a>
+								<div class="bg-overlay">
+									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-speed="350" data-bs-theme="dark">
+										<a href="images/portfolio/full/2.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
+										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
 									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="portfolio-single.html">防火系列 - S300</a></h3>
-									<span><a href="#">三片式球閥</a></span>
+									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-speed="350" data-bs-theme="dark"></div>
 								</div>
 							</div>
-						</article>
+							<div class="portfolio-desc">
+								<h3><a href="portfolio-single.html">智能閥門監控系統</a></h3>
+								<span><a href="#">清晰反饋廠房管道運作狀態，</a><br><a href="#">迅速解決產線管理難題。</a></span>
+							</div>
+						</div>
 
-						<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-media pf-icons">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<a href="portfolio-single.html">
-										<img src="images/portfolio/4/1.jpg" alt="Open Imagination">
-									</a>
-									<div class="bg-overlay">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item">
-											<a href="images/portfolio/full/1.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
-											<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item"></div>
+						<div class="portfolio-item">
+							<div class="portfolio-image">
+								<a href="portfolio-single.html">
+									<img src="images/portfolio/4/1.jpg" alt="Open Imagination">
+								</a>
+								<div class="bg-overlay">
+									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-speed="350" data-bs-theme="dark">
+										<a href="images/portfolio/full/1.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
+										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
 									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="portfolio-single.html">防火系列 - R701 </a></h3>
-									<span><a href="#">( 兩片式球閥 )</a>, <a href="#">NPS 1/4 to 2 ( DN 8 to 50 )</a></span>
+									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-speed="350" data-bs-theme="dark"></div>
 								</div>
 							</div>
-						</article>
+							<div class="portfolio-desc">
+								<h3><a href="portfolio-single.html">工廠資產管理系統</a></h3>
+								<span><a href="#">在工業進步過程中，</a><br><a href="#">實踐維護高效安全管理和技術驅動的最佳幫手。</a></span>
+							</div>
+						</div>
 
-						<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-media pf-icons">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<a href="portfolio-single.html">
-										<img src="images/portfolio/4/1.jpg" alt="Open Imagination">
-									</a>
-									<div class="bg-overlay">
-										<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item">
-											<a href="images/portfolio/full/1.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
-											<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item"><i class="uil uil-ellipsis-h"></i></a>
-										</div>
-										<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item"></div>
+						<div class="portfolio-item">
+							<div class="portfolio-image">
+								<a href="portfolio-single.html">
+									<img src="images/portfolio/4/1.jpg" alt="Open Imagination">
+								</a>
+								<div class="bg-overlay">
+									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-speed="350" data-bs-theme="dark">
+										<a href="images/portfolio/full/1.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
+										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
 									</div>
-								</div>
-								<div class="portfolio-desc">
-									<h3><a href="portfolio-single.html">防火系列 - R701 </a></h3>
-									<span><a href="#">( 兩片式球閥 )</a>, <a href="#">NPS 1/4 to 2 ( DN 8 to 50 )</a></span>
+									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-speed="350" data-bs-theme="dark"></div>
 								</div>
 							</div>
-						</article>
-
-						
-
-				    </div>
+							<div class="portfolio-desc">
+								<h3><a href="portfolio-single.html">球閥產品</a></h3>
+								<span><a href="#">球閥產品介紹</a></span>
+							</div>
+						</div>
+						<div class="portfolio-item">
+							<div class="portfolio-image">
+								<a href="portfolio-single.html">
+									<img src="images/portfolio/4/1.jpg" alt="Open Imagination">
+								</a>
+								<div class="bg-overlay">
+									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-speed="350" data-bs-theme="dark">
+										<a href="images/portfolio/full/1.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
+										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="uil uil-ellipsis-h"></i></a>
+									</div>
+									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-speed="350" data-bs-theme="dark"></div>
+								</div>
+							</div>
+							<div class="portfolio-desc">
+								<h3><a href="portfolio-single.html">球閥產品</a></h3>
+								<span><a href="#">球閥產品介紹</a></span>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="section parallax scroll-detect dark mb-0 border-bottom-0">
 					<img src="images/parallax/7.jpg" class="parallax-bg">
@@ -680,7 +690,7 @@
 
 				
 
-				<a href="#" class="button button-full button-dark text-center text-end mb-6">
+				<a href="#" class="button button-full button-dark text-center text-end mb-6" style="background-color: #333e53; border-color: #333e53;">
 					<div class="container">
 						TRANSWORLD STEEL Three Decades of <strong>Innovation</strong> <i class="fa-solid fa-caret-right" style="top:4px;"></i>
 					</div>
@@ -811,7 +821,9 @@
 					<div class="oc-item"><a href="#"><img src="images/clients/7.png" alt="Clients"></a></div>
 					<div class="oc-item"><a href="#"><img src="images/clients/8.png" alt="Clients"></a></div>
 					<div class="oc-item"><a href="#"><img src="images/clients/9.png" alt="Clients"></a></div>
-					<div class="oc-item"><a href="#"><img src="images/clients/10.png" alt="Clients"></a></div>
+					<div class="oc-item"><a href="#"><img src="images/sparvle/12_半導體.png" alt="Semiconductor"></a></div>
+					<div class="oc-item"><a href="#"><img src="images/sparvle/11_食品.png" alt="Food"></a></div>
+					<div class="oc-item"><a href="#"><img src="images/sparvle/10_礦業.png" alt="Mining"></a></div>
 
 				</div>
 
@@ -829,18 +841,24 @@
 				<div class="footer-widgets-wrap">
 
 					<div class="row col-mb-50">
-						<div class="col-lg-8">
+						<div class="col-lg-3">
 
-							<div class="row col-mb-50">
-								<div class="col-md-4">
-
-									<div class="widget">
+							<div class="widget">
 
 										<img src="images/footer-widget-logo.png" alt="Image" class="footer-logo">
 
 										<p>Sparvle 提供工業閥門與管線的整體解決方案，整合閥門狀態識別、追溯機制、資產管理與維護運作考量，提升系統安全性、可靠度與運轉效率。</p>
 
 										<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+									
+										</div>
+
+							</div>
+						</div>
+						<div class="col-lg-1"></div>
+						<div class="col-lg-4">
+							
+
 									<address>
 										<strong>地址:</strong><br>
 										臺中市大里區仁化里工業十四路34號<br>
@@ -848,90 +866,9 @@
 									<abbr title="Telephone"><strong>TEL:</strong></abbr> +886-4-2271-6107<br>
 									<abbr title="Fax"><strong>FAX:</strong></abbr> +886-4-2271-6127<br>
 									<abbr title="Email Address"><strong>Email:</strong></abbr> info@sparvle.com
-								</div>
 
-									</div>
-
-								</div>
-
-								<div class="col-md-4">
-
-									<div class="widget widget_links">
-
-										<h4>網站地圖</h4>
-
-										<ul>
-											<li><a href="https://codex.wordpress.org/">關於我們</a></li>
-											<li><a href="https://wordpress.org/support/forum/requests-and-feedback">最新消息</a></li>
-											<li><a href="https://wordpress.org/extend/plugins/">智能數位產品介紹</a></li>
-											<li><a href="https://wordpress.org/support/">球閥產品介紹</a></li>
-											<li><a href="https://wordpress.org/extend/themes/">下載專區</a></li>
-											<li><a href="https://wordpress.org/news/">ESG專區</a></li>
-											<li><a href="https://planet.wordpress.org/">聯絡我們</a></li>
-										</ul>
-
-									</div>
-
-								</div>
-
-								<div class="col-md-4">
-
-									<div class="widget">
-										<h4>最新消息</h4>
-
-										<div class="posts-sm row col-mb-30" id="post-list-footer">
-											<div class="entry col-12">
-												<div class="grid-inner row">
-													<div class="col">
-														<div class="entry-title">
-															<h4><a href="#">我們在M-Tech 大阪機械要素展 2025！</a></h4>
-														</div>
-														<div class="entry-meta">
-															<ul>
-																<li>10th July 2025</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="entry col-12">
-												<div class="grid-inner row">
-													<div class="col">
-														<div class="entry-title">
-															<h4><a href="#">Valve World Asia 2025</a></h4>
-														</div>
-														<div class="entry-meta">
-															<ul>
-																<li>10th July 2025</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="entry col-12">
-												<div class="grid-inner row">
-													<div class="col">
-														<div class="entry-title">
-															<h4><a href="#">2025 大阪工業展 10月1日 - 10月3日</a></h4>
-														</div>
-														<div class="entry-meta">
-															<ul>
-																<li>10th July 2025</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-							</div>
-
+								
 						</div>
-
 						<div class="col-lg-4">
 
 							<div class="row col-mb-50">
@@ -958,13 +895,21 @@
 
 										<div class="row col-mb-30">
 											<div class="col-6 col-md-12 col-lg-6 d-flex align-items-center">
-												<a href="#" class="social-icon text-white border-transparent bg-linkedin me-2 mb-0 float-none">
-													<i class="fa-brands fa-linkedin-in"></i>
-													<i class="fa-brands fa-linkedin-in"></i>
+									<a href="https://www.linkedin.com/company/sparvle" target="_blank" rel="noopener" class="social-icon text-white border-transparent bg-linkedin me-2 mb-0 float-none">
+																<i class="fa-brands fa-linkedin-in"></i>
+																<i class="fa-brands fa-linkedin-in"></i>
+															</a>
+															<a href="https://www.linkedin.com/company/sparvle" target="_blank" rel="noopener" class="ms-1"><small class="d-block"><strong>關注我們的</strong><br>Linkedin 專頁</small></a>
+								</div>
+											<div class="col-6 col-md-12 col-lg-6 d-flex align-items-center">
+												<a href="#" class="social-icon text-white border-transparent bg-youtube me-2 mb-0 float-none">
+													<i class="fa-brands fa-youtube"></i>
+													<i class="fa-brands fa-youtube"></i>
 												</a>
-												<a href="#" class="ms-1"><small class="d-block"><strong>關注我們的</strong><br>Linkedin 專頁</small></a>
+												<a href="#" class="ms-1"><small class="d-block"><strong>訂閱我們的</strong><br>Youtube頻道</small></a>
 											</div>
-										</div>
+
+									</div>
 								</div>
 
 							</div>
@@ -979,7 +924,7 @@
 			<!-- Copyrights
 			============================================= -->
 			<div id="copyrights">
-				<div class="container">
+			<div class="container">
 
 					<div class="row col-mb-30">
 
@@ -990,44 +935,15 @@
 
 						<div class="col-md-6 text-center text-md-end">
 							<div class="d-flex justify-content-center justify-content-md-end mb-2">
-								<a href="#" class="social-icon border-transparent si-small h-bg-facebook">
-									<i class="fa-brands fa-facebook-f"></i>
-									<i class="fa-brands fa-facebook-f"></i>
-								</a>
 
-								<a href="#" class="social-icon border-transparent si-small h-bg-x-twitter">
-									<i class="fa-brands fa-x-twitter"></i>
-									<i class="fa-brands fa-x-twitter"></i>
-								</a>
-
-								<a href="#" class="social-icon border-transparent si-small h-bg-google">
-									<i class="fa-brands fa-google"></i>
-									<i class="fa-brands fa-google"></i>
-								</a>
-
-								<a href="#" class="social-icon border-transparent si-small h-bg-pinterest">
-									<i class="fa-brands fa-pinterest-p"></i>
-									<i class="fa-brands fa-pinterest-p"></i>
-								</a>
-
-								<a href="#" class="social-icon border-transparent si-small h-bg-vimeo">
-									<i class="fa-brands fa-vimeo-v"></i>
-									<i class="fa-brands fa-vimeo-v"></i>
-								</a>
-
-								<a href="#" class="social-icon border-transparent si-small h-bg-github">
-									<i class="fa-brands fa-github"></i>
-									<i class="fa-brands fa-github"></i>
-								</a>
-
-								<a href="#" class="social-icon border-transparent si-small h-bg-yahoo">
-									<i class="fa-brands fa-yahoo"></i>
-									<i class="fa-brands fa-yahoo"></i>
-								</a>
-
-								<a href="#" class="social-icon border-transparent si-small me-0 h-bg-linkedin">
+								<a href="https://www.linkedin.com/company/sparvle" target="_blank" rel="noopener" class="social-icon border-transparent si-small h-bg-linkedin">
 									<i class="fa-brands fa-linkedin"></i>
 									<i class="fa-brands fa-linkedin"></i>
+								</a>
+
+								<a href="#" class="social-icon border-transparent si-small me-0 h-bg-youtube">
+									<i class="fa-brands fa-youtube"></i>
+									<i class="fa-brands fa-youtube"></i>
 								</a>
 							</div>
 
