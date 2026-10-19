@@ -83,3 +83,549 @@
 	width: 180px;
 	height: auto;
 }
+
+/* ----------------------------------------------------------------
+	Sparvle 品牌色與滿版開頭
+-----------------------------------------------------------------*/
+
+:root {
+	/* 主題色：CIS PANTONE 7699 U（取自客戶 CIS 色票） */
+	--cnvs-themecolor: #667484;
+	--cnvs-themecolor-rgb: 102, 116, 132;
+	/* 全站字體統一：中英文皆使用 Noto Sans TC（思源黑體／Noto 正黑） */
+	--cnvs-body-font: "Noto Sans TC", sans-serif;
+	--cnvs-primary-font: "Noto Sans TC", sans-serif;
+	--cnvs-secondary-font: "Noto Sans TC", sans-serif;
+	--sparvle-navy: #0b2b4f;
+	/* CIS PANTONE 8785 C（取自客戶 CIS 色票） */
+	--sparvle-8785: #C8D1DD;
+}
+
+/* 深藍底 + 半透明背景圖，用於產品頁等深色滿版開頭 */
+.page-title.page-title-navy {
+	background-color: var(--sparvle-navy);
+}
+
+.page-title.page-title-navy .parallax-bg {
+	opacity: .35;
+}
+
+/* ----------------------------------------------------------------
+	MANTIIO 先行者計劃
+-----------------------------------------------------------------*/
+
+/* 開頭背景：MANTIIO 主視覺 + 持續緩慢放大（Ken Burns） */
+.mantiio-hero {
+	position: relative;
+	overflow: hidden;
+	background-color: #E9E9E7;
+}
+
+.mantiio-hero .mantiio-hero-bg {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
+	transform-origin: 40% 45%;
+	animation: mantiio-fadein 2.5s ease-out both, mantiio-kenburns 5s ease-in-out infinite alternate;
+	will-change: transform;
+	pointer-events: none;
+}
+
+/* 進場：透明度 50% 慢慢變亮到 100% */
+@keyframes mantiio-fadein {
+	from { opacity: .5; }
+	to { opacity: 1; }
+}
+
+@keyframes mantiio-kenburns {
+	from { transform: scale(1); }
+	to { transform: scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.mantiio-hero .mantiio-hero-bg { animation: none; }
+}
+
+.mantiio-hero > .container {
+	position: relative;
+	z-index: 1;
+}
+
+/* 架構圖：中心 MANTIIO + 周圍設備節點，位置以百分比定義，隨寬度等比縮放
+   節點的圓心即定位點，TAG 與標籤以絕對定位掛在圓的上下方 */
+.mantiio-diagram {
+	--node-size: clamp(3.5rem, 11vw, 5.25rem);
+	position: relative;
+	width: 100%;
+	max-width: 560px;
+	aspect-ratio: 1 / 1;
+	margin: 0 auto;
+}
+
+.mantiio-diagram .diagram-lines,
+.mantiio-diagram .diagram-dots {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	pointer-events: none;
+}
+
+.mantiio-diagram .diagram-lines line {
+	stroke: var(--cnvs-themecolor);
+	stroke-width: 1.5;
+	vector-effect: non-scaling-stroke;
+}
+
+.mantiio-diagram .diagram-dots {
+	z-index: 2;
+}
+
+.mantiio-diagram .diagram-dots circle {
+	fill: #FFF;
+	stroke: var(--cnvs-themecolor);
+	stroke-width: 2.5;
+	vector-effect: non-scaling-stroke;
+}
+
+.mantiio-diagram .diagram-hub,
+.mantiio-diagram .diagram-node {
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.mantiio-diagram .diagram-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/* 中心：白色圓 + 主色圓環 + 旋轉虛線外圈 */
+.mantiio-diagram .diagram-hub {
+	left: 50%;
+	top: 50%;
+	width: 38%;
+	aspect-ratio: 1 / 1;
+	z-index: 1;
+}
+
+.mantiio-diagram .diagram-hub .rounded-skill {
+	position: absolute;
+	inset: 0;
+	margin: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.mantiio-diagram .diagram-hub .rounded-skill canvas {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.mantiio-diagram .hub-orbit {
+	position: absolute;
+	inset: -11%;
+	border: 1.5px dashed rgba(var(--cnvs-themecolor-rgb), .45);
+	border-radius: 50%;
+	animation: mantiio-spin 40s linear infinite;
+}
+
+.mantiio-diagram .hub-core {
+	position: absolute;
+	inset: 9%;
+	border-radius: 50%;
+	background: linear-gradient(145deg, #FFF 0%, #F2F3F5 100%);
+	border: 1px solid #E3E6EA;
+	box-shadow: 0 18px 40px rgba(var(--cnvs-themecolor-rgb), .22), inset 0 0 0 6px #FFF;
+	color: var(--cnvs-themecolor);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.mantiio-diagram .hub-core strong {
+	font-size: clamp(1rem, 3.4vw, 1.75rem);
+	letter-spacing: .04em;
+	line-height: 1.1;
+}
+
+.mantiio-diagram .hub-core small {
+	font-size: clamp(.625rem, 1.4vw, .75rem);
+	color: #6B7280;
+	margin-top: .25rem;
+}
+
+/* 節點：主色粗環 + 白底圖示 + 局部虛線軌道 */
+.mantiio-diagram .diagram-node {
+	width: var(--node-size);
+	height: var(--node-size);
+	z-index: 3;
+}
+
+.mantiio-diagram .node-ring {
+	position: absolute;
+	inset: 0;
+	border-radius: 50%;
+	background-color: var(--cnvs-themecolor);
+	box-shadow: 0 10px 24px rgba(var(--cnvs-themecolor-rgb), .3);
+}
+
+.mantiio-diagram .node-ring::after {
+	content: "";
+	position: absolute;
+	inset: -9px;
+	border: 1.5px dashed rgba(var(--cnvs-themecolor-rgb), .6);
+	border-left-color: transparent;
+	border-radius: 50%;
+	animation: mantiio-spin 12s linear infinite;
+}
+
+.mantiio-diagram .node-core {
+	position: absolute;
+	inset: 14%;
+	border-radius: 50%;
+	background: linear-gradient(145deg, #FFF 0%, #EEF0F3 100%);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--cnvs-themecolor);
+	font-size: calc(var(--node-size) * .34);
+}
+
+@keyframes mantiio-spin {
+	to { transform: rotate(360deg); }
+}
+
+.mantiio-diagram .node-tag,
+.mantiio-diagram .node-label {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+.mantiio-diagram .node-tag {
+	font-weight: 600;
+	letter-spacing: .06em;
+	color: var(--cnvs-themecolor);
+	background-color: #FFF;
+	border: 2px solid var(--cnvs-themecolor);
+}
+
+.mantiio-diagram .node-label {
+	font-size: .8125rem;
+	font-weight: 600;
+	color: #374151;
+	padding: 0 .5rem;
+	border-radius: 1rem;
+	background-color: rgba(233, 233, 231, .85);
+}
+
+/* 左右兩個：TAG 在上、標籤在下；下方兩個：標籤與 TAG 都在下方，避開斜向連線 */
+.mantiio-diagram .node-top .node-tag { bottom: calc(100% + 14px); }
+.mantiio-diagram .node-top .node-label { top: calc(100% + 12px); }
+.mantiio-diagram .node-bottom .node-label { top: calc(100% + 12px); }
+.mantiio-diagram .node-bottom .node-tag { top: calc(100% + 42px); }
+/* 正上方節點：標籤與 TAG 都在上方，避開往下的連線 */
+.mantiio-diagram .node-up .node-label { bottom: calc(100% + 12px); }
+.mantiio-diagram .node-up .node-tag { bottom: calc(100% + 40px); }
+
+@media (prefers-reduced-motion: reduce) {
+	.mantiio-diagram .hub-orbit,
+	.mantiio-diagram .node-ring::after { animation: none; }
+}
+
+/* 夥伴 Logo 待補佔位 */
+.logo-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 96px;
+	color: #AAA;
+	font-size: .875rem;
+	letter-spacing: .04em;
+}
+
+/* 白色（上）→ PANTONE 8785 C（下）漸層區塊 */
+.section-cis-gradient {
+	background: linear-gradient(to bottom, #FFF 0%, var(--sparvle-8785) 100%);
+}
+
+
+/* MANTIIO 應用程式畫面（移植自客戶「工廠資產管理系統示意.html」桌面版） */
+.mantiio-app { max-width: 1080px; color: #1d1d1f; text-align: left; }
+.mantiio-app .mockup-wrap { background: #fff; border-radius: 14px 14px 0 0; border: 1px solid rgba(0,0,0,0.1); border-bottom: 0;
+	box-shadow: 0 8px 20px rgba(0,0,0,0.07), 0 28px 64px rgba(0,0,0,0.1); overflow: hidden; }
+.mantiio-app .browser-chrome { background: #f2f2f7; border-bottom: 1px solid rgba(0,0,0,0.08); padding: 11px 16px; display: flex; align-items: center; gap: 12px; }
+.mantiio-app .bdots { display: flex; gap: 6px; }
+.mantiio-app .bdots span { width: 11px; height: 11px; border-radius: 50%; }
+.mantiio-app .bd1 { background: #FF5F57; }
+.mantiio-app .bd2 { background: #FEBC2E; }
+.mantiio-app .bd3 { background: #28C840; }
+.mantiio-app .burl { flex: 1; max-width: 380px; margin: 0 auto; background: rgba(0,0,0,0.07); border-radius: 6px; padding: 4px 12px; font-size: 12px; color: #6e6e73; text-align: center; }
+.mantiio-app .app-shell { display: grid; grid-template-columns: 196px 1fr; min-height: 500px; }
+.mantiio-app .aside { background: #fafafa; border-right: 1px solid rgba(0,0,0,0.07); padding: 18px 0; }
+.mantiio-app .aside-logo { padding: 0 14px 14px; margin-bottom: 6px; font-size: 15px; font-weight: 700; letter-spacing: -0.4px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+.mantiio-app .aside-cat { font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #aeaeb2; padding: 12px 14px 5px; }
+.mantiio-app .aside-item { display: flex; align-items: center; gap: 8px; padding: 7px 14px; font-size: 13px; color: #3a3a3c; }
+.mantiio-app .aside-item svg { flex-shrink: 0; opacity: 0.55; }
+.mantiio-app .aside-item.on { background: rgba(0,113,227,0.09); color: #0071e3; font-weight: 500; }
+.mantiio-app .aside-item.on svg { opacity: 1; }
+.mantiio-app .aside-badge { margin-left: auto; font-size: 10px; font-weight: 600; background: #0071e3; color: #fff; border-radius: 8px; padding: 1px 6px; }
+.mantiio-app .main-panel { background: #fff; padding: 22px 26px; overflow: hidden; }
+.mantiio-app .main-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.mantiio-app .main-title { font-size: 19px; font-weight: 600; letter-spacing: -0.4px; }
+.mantiio-app .main-sub { font-size: 12px; color: #aeaeb2; margin-top: 1px; }
+.mantiio-app .live-badge { display: flex; align-items: center; gap: 5px; background: rgba(0,168,107,0.09); border: 1px solid rgba(0,168,107,0.18); border-radius: 980px; padding: 5px 11px; font-size: 11px; font-weight: 600; color: #00a86b; }
+.mantiio-app .ldot { width: 5px; height: 5px; background: #00a86b; border-radius: 50%; animation: mantiio-pulse 1.8s infinite; }
+@keyframes mantiio-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+.mantiio-app .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 16px; }
+.mantiio-app .kpi { border-radius: 11px; padding: 14px; background: #f5f5f7; }
+.mantiio-app .kpi.blue { background: #0071e3; }
+.mantiio-app .kpi-lbl { font-size: 10px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #aeaeb2; margin-bottom: 7px; }
+.mantiio-app .kpi.blue .kpi-lbl { color: rgba(255,255,255,0.7); }
+.mantiio-app .kpi-val { font-size: 24px; font-weight: 700; letter-spacing: -1px; line-height: 1; }
+.mantiio-app .kpi.blue .kpi-val { color: #fff; }
+.mantiio-app .kpi-d { font-size: 10px; font-weight: 500; color: #00a86b; margin-top: 5px; }
+.mantiio-app .kpi-d.warn { color: #ff6b35; }
+.mantiio-app .kpi.blue .kpi-d { color: rgba(255,255,255,0.75); }
+.mantiio-app .panels { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.mantiio-app .panel { background: #f5f5f7; border-radius: 11px; padding: 14px; }
+.mantiio-app .panel-hd { font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #aeaeb2; margin-bottom: 12px; display: flex; justify-content: space-between; }
+.mantiio-app .panel-hd span { color: #0071e3; font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 11px; }
+.mantiio-app .vrow { display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 8px; padding: 7px 9px; margin-bottom: 6px; }
+.mantiio-app .vrow:last-child { margin-bottom: 0; }
+.mantiio-app .vid { font-size: 10px; font-weight: 600; color: #0071e3; width: 54px; font-variant-numeric: tabular-nums; }
+.mantiio-app .vname { flex: 1; font-size: 11px; color: #3a3a3c; }
+.mantiio-app .vtag { font-size: 9px; font-weight: 600; border-radius: 980px; padding: 2px 7px; }
+.mantiio-app .vt-g { background: rgba(0,168,107,0.1); color: #00a86b; }
+.mantiio-app .vt-w { background: rgba(255,107,53,0.1); color: #ff6b35; }
+.mantiio-app .vt-i { background: rgba(0,0,0,0.06); color: #aeaeb2; }
+.mantiio-app .spark { display: flex; align-items: flex-end; gap: 2px; height: 20px; width: 44px; }
+.mantiio-app .sb { flex: 1; border-radius: 1.5px; background: #d1d1d6; }
+.mantiio-app .sb.hi { background: #0071e3; }
+
+@media (max-width: 860px) {
+	.mantiio-app .app-shell { grid-template-columns: 1fr; }
+	.mantiio-app .aside { display: none; }
+	.mantiio-app .kpi-row { grid-template-columns: 1fr 1fr; }
+	.mantiio-app .panels { grid-template-columns: 1fr; }
+	.mantiio-app .live-badge { display: none; }
+}
+
+/* 先行者優惠卡片的大數字 */
+.perk-number {
+	display: block;
+	margin: .5rem 0 .75rem;
+	font-size: clamp(2rem, 4vw, 2.75rem);
+	font-weight: 700;
+	line-height: 1.1;
+	color: var(--cnvs-themecolor);
+}
+
+/* 先行者頁「適用產業」：沿用應用領域頁的 block-card-9 卡片，高度縮小 */
+.block-card-9 .industry-card {
+	position: relative;
+	height: 320px;
+	overflow: hidden;
+}
+
+/* 立即申請區：滑鼠移入時淡入開頭主視覺（100% 不透明） */
+.mantiio-apply {
+	position: relative;
+	overflow: hidden;
+}
+
+.mantiio-apply::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: url("../images/sparvle/mantiio-pioneer-bg.jpg") center center / cover no-repeat;
+	opacity: 0;
+	transition: opacity .6s ease;
+	pointer-events: none;
+}
+
+.mantiio-apply:hover::before {
+	opacity: 1;
+}
+
+.mantiio-apply > .container {
+	position: relative;
+	z-index: 2;
+}
+
+/* 進場 Reveal：白底開始，主色色塊由右至左填滿，完成後文字淡入（僅一次，由 JS 加上 .is-revealed） */
+.mantiio-apply {
+	background-color: #FFF;
+}
+
+.mantiio-apply .reveal-fill {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	background-color: var(--cnvs-themecolor);
+	transform: scaleX(0);
+	transform-origin: right center;
+	transition: transform 1.1s cubic-bezier(.77, 0, .175, 1);
+}
+
+.mantiio-apply.is-revealed .reveal-fill {
+	transform: scaleX(1);
+}
+
+.mantiio-apply > .container {
+	opacity: 0;
+	transform: translateY(16px);
+	transition: opacity .7s ease .9s, transform .7s ease .9s;
+}
+
+.mantiio-apply.is-revealed > .container {
+	opacity: 1;
+	transform: none;
+}
+
+/* 填色完成前不觸發 hover 換圖 */
+.mantiio-apply:not(.is-revealed):hover::before {
+	opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.mantiio-apply .reveal-fill,
+	.mantiio-apply > .container { transition: none; }
+}
+
+/* Sparvle 四芒星背景（圖檔：sparvle-star.svg）
+   區塊加上 Canvas 的 scroll-detect，捲動時依 --cnvs-scroll-percent（0→100）小幅上下位移 */
+.sparkle-area {
+	position: relative;
+	overflow: hidden;
+}
+
+.sparkle-area > .container {
+	position: relative;
+	z-index: 1;
+}
+
+.sparkle-star {
+	position: absolute;
+	z-index: 0;
+	width: min(36vw, 480px);
+	height: auto;
+	opacity: .6;
+	pointer-events: none;
+	transform: translateY(calc((var(--cnvs-scroll-percent, 50) - 50) * -0.8px));
+	transition: transform .2s linear;
+}
+
+.sparkle-right .sparkle-star {
+	top: 8%;
+	right: -10%;
+}
+
+.sparkle-left .sparkle-star {
+	top: 50%;
+	left: -12%;
+	margin-top: calc(min(36vw, 480px) * -.5);
+}
+
+@media (max-width: 991.98px) {
+	.sparkle-star { width: 60vw; opacity: .45; }
+	.sparkle-left .sparkle-star { margin-top: -30vw; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sparkle-star { transform: none; transition: none; }
+}
+
+/* 開頭架構圖上下置中：圖的 TAG 會超出圖框上緣，往下補位並扣掉等量的底部留白，讓圖落在 header 下方可見區域的正中間 */
+@media (min-width: 992px) {
+	.mantiio-hero .mantiio-diagram { margin-top: 44px; }
+	.mantiio-hero > .container { padding-bottom: calc(5rem - 44px) !important; }
+}
+
+/* 先行者心得卡片：字母頭像（取代人像照片） */
+.testimonial-avatar {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	width: 48px;
+	height: 48px;
+	background-color: var(--cnvs-themecolor);
+	color: #FFF;
+	font-weight: 600;
+}
+
+/* Program Benefits 大標：桌面 80px，手機自動縮小避免換行溢出 */
+.promo .promo-title {
+	font-size: clamp(2.5rem, 7vw, 5rem);
+	line-height: 1.05;
+	margin-bottom: .5rem;
+}
+
+/* 「希望提升以下能力」流程圖示：預設外框，滑鼠移到該步驟時變成主色實心（取代 Canvas 預設的深灰 hover） */
+.mantiio-steps li .i-bordered {
+	transition: background-color .3s ease, border-color .3s ease, color .3s ease;
+}
+
+.mantiio-steps li:hover .i-bordered {
+	background-color: var(--cnvs-themecolor) !important;
+	background-image: linear-gradient(135deg, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%);
+	border-color: var(--cnvs-themecolor) !important;
+	color: #FFF !important;
+}
+
+/* 立即申請區 hover：背景換成淺色主視覺時，文字同步轉為深色以維持可讀性 */
+.mantiio-apply h2,
+.mantiio-apply p {
+	transition: color .6s ease, opacity .6s ease;
+}
+
+.mantiio-apply:hover h2 {
+	color: #222 !important;
+}
+
+.mantiio-apply:hover p {
+	color: #444 !important;
+	opacity: 1;
+}
+
+.mantiio-apply .button {
+	transition: color .6s ease, border-color .6s ease, background-color .3s ease;
+}
+
+/* hover 背景轉淺色時，白框按鈕同步轉深色 */
+.mantiio-apply:hover .button-border.button-light {
+	color: #222 !important;
+	border-color: #222 !important;
+}
+
+.mantiio-apply:hover .button-border.button-light:hover {
+	background-color: #222 !important;
+	color: #FFF !important;
+}
+
+/* 球閥產品總覽：產品照白底置中，滑鼠移入時微放大 */
+.portfolio-image.product-thumb {
+	background-color: #FFF;
+	border: 1px solid #EEE;
+	border-radius: .5rem;
+	overflow: hidden;
+}
+
+.portfolio-image.product-thumb img {
+	transition: transform .4s ease;
+}
+
+.portfolio-item:hover .portfolio-image.product-thumb img {
+	transform: scale(1.05);
+}
